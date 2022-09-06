@@ -1,43 +1,31 @@
-﻿namespace InsertionSort
+namespace BinarySearchTree
 {
     class program
     {
         public static void Main(string[] args)
         {
-            int[] arr = new int[] { 23, 9, 3 };
-            int n = 3, i, j, val, flag;
-            for(i= 0; i < n; i++)
+           
+
+            int[] arr = { 70, 30, 42, 55, 10 };
+            int temp;
+            for(int j=0;j<=arr.Length-2;j++)
             {
-                val= arr[i];
-                flag = 0;
-                for (j=i-1; j>=0 && flag!=1;)
+                for(int i=0;i<=arr.Length-2;i++)
                 {
-                    if (val < arr[j])
+                    if (arr[i] > arr[i+1])
                     {
-                        arr[j + 1] = arr[j];
-                        j--;
-                        arr[j + 1] = val;
+                        temp = arr[i + 1];
+                        arr[i+1] = arr[i];
+                        arr[i] = temp;
                     }
-                    else flag = 1;
                 }
             }
-            foreach(int ele in arr)
+
+            Console.WriteLine("Sorted Array");
+            foreach (int ele in arr)
             {
-                Console.WriteLine(ele);
+                Console.Write(ele + " ");
             }
-
         }
-    }
-    }
-        string str1 = "heart";
-        string str2 = "earth";
-
-        char[] chr1 = str1.ToLower().ToCharArray();
-        char[] chr2 = str2.ToLower().ToCharArray();
-       
-   Array.Sort(chr1);
-   Array.Sort(chr2);
-
-    string val1 = 
     }
 }
