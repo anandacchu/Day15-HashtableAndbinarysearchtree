@@ -4,14 +4,7 @@ namespace HashTable
     {
         public static void Main(string[] args)
         {
-            MyMapNode<string, string> hash = new MyMapNode<string, string>(5);
-
-            hash.GetFreq();
-
-
-
-            Console.ReadKey();
-
+               Console.WriteLine("Welcome to Hash Tables and Binary Search Tree program");
         }
     }
 }
